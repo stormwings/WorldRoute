@@ -1,29 +1,40 @@
 import React, { FunctionComponent } from 'react';
-
-import CardHeader from './../../dumb/CardHeader/CardHeader';
-import CurrencyStatus from './../../dumb/CurrencyStatus/CurrencyStatus';
-import Separator from './../../dumb/Separator/Separator';
-import ScreenContainer from './../../containers/ScreenContainer/ScreenContainer';
-import IconWallet from './../../../assets/svg/icon_wallet.svg';
-import IconList from './../IconList/IconList';
+import { useHistory } from 'react-router-dom';
+import Icon from '../../dumb/Icon/Icon';
+import IconAdd from './../../../assets/svg/add.svg';
+import ScreenContainer from '../../dumb/ScreenContainer/ScreenContainer';
+import './IconList.scss';
 
 interface IProps {
-  cryptoValue: number;
-  fiatValue: number;
 }
 
-const StatusHeader: FunctionComponent<IProps> = props => {
-  const { cryptoValue, fiatValue } = props;
+const StatusHeader: FunctionComponent<IProps> = () => {
+  const history = useHistory();
 
   return (
     <ScreenContainer className="hover">
-      <div className="card--header__container" style={{ display: 'flex' }}>
-        <CardHeader content="My balance" subtitle="View Balance Details" icon={IconWallet} />
-        <CurrencyStatus principalValue={`BTC ${cryptoValue}`} secondaryValue={`${fiatValue} USD`} principalIcon="bitcoin" />
+      <div id="card--header__container">
+        <Icon
+          image={IconAdd}
+          copy="España"
+          onClick={() => history.push('/country')}
+        />
+        <Icon
+          image={IconAdd}
+          copy="Francia"
+          onClick={() => history.push('/country')}
+        />
+        <Icon
+          image={IconAdd}
+          copy="Japon"
+          onClick={() => history.push('/country')}
+        />
+        <Icon
+          image={IconAdd}
+          copy="Suecia"
+          onClick={() => history.push('/country')}
+        />
       </div>
-      <Separator />
-      {/* operation icon list */}
-      <IconList />
     </ScreenContainer>
   );
 };

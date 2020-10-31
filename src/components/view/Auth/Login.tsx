@@ -5,9 +5,8 @@ import useForm from 'react-hook-form';
 import './Auth.scss';
 
 import { authSignIn, authClearErrors } from './../../../redux/actions/authActions';
-import SvgBitcoin from './../../../assets/components/SvgBitcoin';
-import HeaderContainer from './../../../components/containers/HeaderContainer/HeaderContainer';
-import ScreenContainer from './../../../components/containers/ScreenContainer/ScreenContainer';
+import HeaderContainer from '../../dumb/HeaderContainer/HeaderContainer';
+import ScreenContainer from '../../dumb/ScreenContainer/ScreenContainer';
 import Separator from './../../../components/dumb/Separator/Separator';
 import { Title } from './../../dumb/Text/Text';
 import Input from './../../dumb/Input/Input';
@@ -36,8 +35,7 @@ const Login: FunctionComponent = () => {
         <ScreenContainer className="hover">
           <form onSubmit={handleSubmit(onSubmit)} style={{ display: 'contents' }}>
             <div className="welcome--image">
-              <Title content="Glad to see you!" className="text-center" />
-              <SvgBitcoin className="welcome--icon" />
+              <Title content="Glad to see you ;)" className="text-center" />
             </div>
             {errors && (
               <p className="option">
@@ -48,7 +46,7 @@ const Login: FunctionComponent = () => {
                 ))}
               </p>
             )}
-            <p className="option">example => user: testing pass: testing63 </p>
+            <p className="option">example user: testing pass: testing63 </p>
             <div className="form--container">
               <Input 
                 id="auth_input_username"

@@ -5,9 +5,8 @@ import useForm from 'react-hook-form';
 import './Auth.scss';
 
 import { authSignUp, authClearErrors } from './../../../redux/actions/authActions';
-import SvgBitcoin from './../../../assets/components/SvgBitcoin';
-import HeaderContainer from './../../../components/containers/HeaderContainer/HeaderContainer';
-import ScreenContainer from './../../../components/containers/ScreenContainer/ScreenContainer';
+import HeaderContainer from '../../dumb/HeaderContainer/HeaderContainer';
+import ScreenContainer from '../../dumb/ScreenContainer/ScreenContainer';
 import Separator from './../../../components/dumb/Separator/Separator';
 import { Title } from './../../dumb/Text/Text';
 import Input from './../../dumb/Input/Input';
@@ -36,8 +35,7 @@ const Register: FunctionComponent = () => {
         <ScreenContainer className="hover">
           <form onSubmit={handleSubmit(onSubmit)} style={{ display: 'contents' }}>
             <div className="welcome--image">
-              <Title content={'¡Join the crypto world!'} className="text-center" />
-              <SvgBitcoin className="welcome--icon" />
+              <Title content={'Travel around the world!'} className="text-center" />
             </div>
             {errors && (
               <p className="option">

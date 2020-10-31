@@ -2,20 +2,20 @@ import React, { FunctionComponent, Fragment, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import useForm from 'react-hook-form';
 
-import { saveProfile, getProfile } from './../../../redux/actions/authActions';
-import ScreenContainer from './../../../components/containers/ScreenContainer/ScreenContainer';
-import HeaderContainer from './../../containers/HeaderContainer/HeaderContainer';
-import Separator from './../../../components/dumb/Separator/Separator';
-import Input from './../../dumb/Input/Input';
-import Button from './../../dumb/Button/Button';
-import CardHeader from './../../dumb/CardHeader/CardHeader';
-import StatusHeader from './../../smart/StatusHeader/StatusHeader';
-import Menu from './../../smart/Menu/Menu';
-import IconProfile from './../../../assets/svg/name.svg';
+import { saveProfile, getProfile } from '../../redux/actions/authActions';
+import ScreenContainer from '../dumb/ScreenContainer/ScreenContainer';
+import HeaderContainer from '../dumb/HeaderContainer/HeaderContainer';
+import Separator from '../dumb/Separator/Separator';
+import Input from '../dumb/Input/Input';
+import Button from '../dumb/Button/Button';
+import CardHeader from '../dumb/CardHeader/CardHeader';
+import StatusHeader from '../smart/StatusHeader/StatusHeader';
+import Menu from '../smart/Menu/Menu';
+import IconProfile from './../../assets/svg/name.svg';
 
 const User: FunctionComponent = () => {
   const dispatch = useDispatch();
-  const myWallet = useSelector((state: any) => state.wallet);
+
   const { auth } = useSelector((state: any) => state);
   const { register, handleSubmit } = useForm();
   const { profile } = auth;
@@ -31,7 +31,7 @@ const User: FunctionComponent = () => {
   return (
     <Fragment>
       <HeaderContainer />
-      <StatusHeader cryptoValue={myWallet.currency.BTC} fiatValue={myWallet.currency.USD} />
+      <StatusHeader  />
       <ScreenContainer>
         <form onSubmit={handleSubmit(onSubmit)} style={{ display: 'contents' }}>
           <CardHeader content="Settings" subtitle="Personal Information" icon={IconProfile} className="header" />
