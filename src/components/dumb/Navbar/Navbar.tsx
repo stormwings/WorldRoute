@@ -16,14 +16,6 @@ export const Navbar: FunctionComponent<IProps> = props => {
 
   return (
     <div id="navbar">
-      <div
-        className="menu-icon"
-        style={{ cursor: "pointer" }}
-        onClick={() => history.push("/")}
-      >
-        <img src={ImageMenuIcon} alt="menu-icon" className="image" />
-        <span className="title">{title}</span>
-      </div>
       <div 
         className="menu-avatar" 
         style={{ cursor: 'pointer' }} 
