@@ -1,0 +1,54 @@
+// @import "./../../../styles/variables";
+// @import "./../../../styles/fonts";
+// @import "./../../../styles/mixins";
+
+#title-panel {
+  display: flex;
+  justify-content: space-between;
+
+  .title-panel__box {
+    width: 100%;
+    padding: 0 20px;
+
+    &__title {
+      font-size: 2em;
+      font-weight: 400;
+      margin: 0px;
+
+      &.times {
+        font-family: 'Times New Roman', Times, serif;
+      }
+
+      &.bold {
+        font-weight: 700;
+      }
+
+      &.size-m {
+        font-size: 20px
+      }
+
+      &.size-s {
+        font-size: 9px
+      }
+
+      &.size-xs {
+        font-size: 7px
+      }
+    }
+
+    &__subtitle {
+      color: gray;
+      margin: 0px;
+      font-size: 0.7em;
+    }
+  }
+
+  .title-panel__link {
+    margin: 15px 6px 12px;
+    font-size: 12px;
+    text-decoration: none;
+    color: blue;
+    cursor: pointer;
+    outline: inherit;
+  }
+}

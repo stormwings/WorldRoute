@@ -4,6 +4,9 @@ import ScreenContainer from '../dumb/ScreenContainer/ScreenContainer';
 import Separator from '../dumb/Separator/Separator';
 import StatusHeader from '../smart/StatusHeader/StatusHeader';
 import Menu from '../smart/Menu/Menu';
+import TitlePanel from '../dumb/TitlePanel/TitlePanel';
+
+import Remainder from '../smart/Remainder/Remainder';
 
 const Dashboard: FunctionComponent = () => {
   // const dispatch = useDispatch();
@@ -15,12 +18,20 @@ const Dashboard: FunctionComponent = () => {
   return (
     <Fragment>
       <HeaderContainer />
-      <StatusHeader />
-      <ScreenContainer>
+      <TitlePanel 
+        title='Hello Username :)'
+        subtitle="Nombre de paso" 
+        fontSize="size-m"
+        fontBold
+      />
+      <Remainder
+      />
+      {/* <StatusHeader /> */}
+      {/* <ScreenContainer>
         dashboard last people's posts list
         <Separator />
         <Menu />
-      </ScreenContainer>
+      </ScreenContainer> */}
     </Fragment>
   );
 };
