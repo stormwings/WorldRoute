@@ -5,6 +5,7 @@ import Separator from '../dumb/Separator/Separator';
 import StatusHeader from '../smart/StatusHeader/StatusHeader';
 import Menu from '../smart/Menu/Menu';
 import TitlePanel from '../dumb/TitlePanel/TitlePanel';
+import ListItems from './../smart/ListItems/ListItems';
 
 import Remainder from '../smart/Remainder/Remainder';
 
@@ -18,13 +19,44 @@ const Dashboard: FunctionComponent = () => {
   return (
     <Fragment>
       <HeaderContainer />
-      <TitlePanel 
+      <TitlePanel
         title='Hello Username :)'
         subtitle="Nombre de paso" 
         fontSize="size-m"
         fontBold
       />
-      <Remainder
+      <Remainder />
+      <TitlePanel
+        title='Ultimos artículos :)'
+        fontSize="size-m"
+        redirection={{
+          name: "Ver todos",
+          link: "uwu"
+        }}
+        fontBold
+      />
+      <ListItems
+        items={
+          [{
+            operation_type: "add",
+            date: "4",
+            currencyEnd: "2",
+            currencyStart: "3",
+            ingressAmount: "5",
+            substractionAmount: "6",
+            trading_type: "7",
+          }, {
+            operation_type: "add",
+            date: "4",
+            currencyEnd: "2",
+            currencyStart: "3",
+            ingressAmount: "5",
+            substractionAmount: "6",
+            trading_type: "7",
+          }]
+        }
+        includeSpan
+        onClickSpan={() => true}
       />
       {/* <StatusHeader /> */}
       {/* <ScreenContainer>
