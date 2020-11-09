@@ -12,26 +12,18 @@ const StatusHeader: FunctionComponent<IProps> = () => {
   const history = useHistory();
 
   return (
-    <ScreenContainer className="hover">
+    <ScreenContainer>
       <div id="card--header__container">
         <Icon
           image={IconAdd}
-          copy="España"
           onClick={() => history.push('/country')}
         />
         <Icon
           image={IconAdd}
-          copy="Francia"
           onClick={() => history.push('/country')}
         />
         <Icon
           image={IconAdd}
-          copy="Japon"
-          onClick={() => history.push('/country')}
-        />
-        <Icon
-          image={IconAdd}
-          copy="Suecia"
           onClick={() => history.push('/country')}
         />
       </div>
